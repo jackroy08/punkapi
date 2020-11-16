@@ -1,0 +1,30 @@
+@import "../../variables.scss";
+
+.cards {
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-gap: $base-spacing * 4;
+  justify-content: space-around;
+  min-height: 100%;
+  padding: $base-spacing * 4;
+  
+
+  .card {
+    height: 350px;
+    width: 250px;
+  }
+}
+
+.cardsUD {
+    max-width: 200vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-gap: $base-spacing * 4;
+    justify-content: space-around;
+    min-height: 100%;
+    padding: $base-spacing * 4;
+    transform: rotate(180);
+}
+@media only screen and (min-width: 768px) {
+}

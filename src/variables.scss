@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+$base-spacing: 5px;
+
+$primary-color:black;
+$secondary-color: #008fbb;
+$tertiary-color: rgb(141, 140, 140);
+$background-card-front: linear-gradient(145deg, #ffffff, #d6d6d6);
+$background-card-back: linear-gradient(145deg, #d6d6d6, #ffffff);
+
+$primary-color-transparent: rgba(70, 50, 111, 0.85);
+$secondary-color-transparent: rgba(236, 69, 102, 0.85);
+$tertiary-color-transparent: rgba(141, 140, 140, 0.85);
+
+$primary-border: none;
+$secondary-border: none;
+
+$primary-text: black;
+$secondary-text: gray;
+$tertiary-text: rgb(199, 197, 197);
+
+$card-shadowing: 11px 11px 22px #7e7e7e, 
+-11px -11px 22px #ffffff;
+
+$card-hover-shadowing:14px 14px 28px #a9a9a9, 
+-14px -14px 28px #ffffff;
+
+$primary-font:'Oswald';
+$secondary-font: 'Roboto';
+
+$NavBar-height-mb: 60px;
+$NavBar-height: 75px;
+
+$border-rounding: 5px;
+
+%card {
+  max-height: 400px;
+  max-width: 275px;
+  height: 100%;
+  width: 100%;
+  border-radius: $border-rounding;
+  box-shadow: $card-shadowing;
+  border: $primary-border;
+  backface-visibility: hidden;
+  
+  position: absolute;
+
+  &:hover {
+    box-shadow: $card-hover-shadowing;
+    border: $secondary-border;
+    cursor: pointer;
+    
+
+    .recipeDetails {
+      border-color: $secondary-color;
+
+      h2 {
+        color: $primary-text;
+      }
+    }
+  }
+}

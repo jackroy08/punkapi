@@ -1,0 +1,27 @@
+@import "../../variables.scss";
+
+
+.recipeCard {
+  height: 100%;
+  width: 100%;
+  transition: transform 0.25s;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  position: relative;
+  z-index: 0;
+
+  &.faceDown {
+    transform: rotatey(180deg);
+  }
+
+  .front {
+    @extend %card;
+    background: $background-card-front;
+  }
+
+  .back {
+    @extend %card;
+    transform: rotatey(180deg);
+    background: $background-card-back;
+  }
+}

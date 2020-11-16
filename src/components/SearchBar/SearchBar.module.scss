@@ -1,0 +1,47 @@
+﻿@import "../../variables.scss";
+
+.search {
+  input {
+    color:black;
+    height: 100%;
+    width: 100px;
+    vertical-align: top;
+    margin-right: $base-spacing * 2;
+    font-family: $secondary-font;
+    font-size: 15px;
+    // padding-left: $base-spacing;
+    border: none;
+    border-bottom: $primary-border;
+    background: #EEEEEE;
+    border-radius:  2px;
+    box-shadow: 11px 11px 22px #006685, 
+    -11px -11px 22px #00b8f1;
+
+    &:focus {
+      outline: none;
+      border-color: $secondary-color;
+      color: $secondary-color;
+      
+    }
+
+    &::placeholder {
+      color: $tertiary-text;
+    }
+  }
+
+  .fa {
+    &:hover {
+      cursor: pointer;
+      color: $secondary-color;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .search {
+    input {
+      width: unset;
+      font-size: 20px;
+    }
+  }
+}
